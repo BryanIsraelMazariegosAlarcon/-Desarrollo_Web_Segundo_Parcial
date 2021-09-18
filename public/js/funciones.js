@@ -18,7 +18,9 @@ function mostrar_filtros() {
     }
 }
 
+
 //lista de los generos
+
 
 //aqui se obtiene los generos
 var caja_select = document.getElementById('generos');
@@ -40,6 +42,7 @@ fetch(
         });
     });
 
+
 // aplicando genero
 function aplicar_generos() {
     document.querySelector('.main').innerHTML = `<h1 class="heading">Pelis</h1>
@@ -51,6 +54,7 @@ function aplicar_generos() {
     var id_genero = valor.split('_', 2);
     fetchMovieListByGenres(id_genero[0], id_genero[1]);
 }
+
 
 //fecha
 var caja_fecha = document.getElementById('fecha');
@@ -85,13 +89,12 @@ function aplicar_fecha() {
 }
 
 
-
 //clasificacion
 var div_categoriaa = document.getElementById('clasificacion');
 const aplicar_clasificacion = () => {
     fetch('https://api.themoviedb.org/3/certification/movie/list?api_key=153474a6a2d2bbd467af8d2189312c3c')
         .then(res => res.json()).then(data => {
-            data.certifications.US.forEach(item => {               
+            data.certifications.US.forEach(item => {
                 div_categoriaa.innerHTML += `<option value="${item.certification}">${item.certification}</option>`;
             })
         })
@@ -99,7 +102,6 @@ const aplicar_clasificacion = () => {
 aplicar_clasificacion();
 
 
-//clasificacion
 function aplicar_clasificacion2() {
     console.log(data_original);
     document.querySelector('.main').innerHTML = `<h2 class="heading">Películas Segun Clasificacion</h2>
@@ -117,12 +119,12 @@ function aplicar_clasificacion2() {
             certification_country: "US",
             certification: valor.value,
             page: Math.floor(Math.random() * 3) + 1
-        })
-        ).then(res => res.json()).then(data => {                        
-                makeCategoryElement(item.name, data.results);
+        })).then(res => res.json()).then(data => {
+            makeCategoryElement(item.name, data.results);
         });
     });
 }
+
 
 //series
 function aplicar_serie() {
@@ -154,6 +156,7 @@ function aplicar_serie() {
         });
     });
 }
+
 
 //+18 hotcake
 function aplicar_peliculas18() {
