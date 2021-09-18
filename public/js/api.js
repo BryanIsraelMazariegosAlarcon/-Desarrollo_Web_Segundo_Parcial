@@ -9,4 +9,4 @@ let movie_detail_http = "https://api.themoviedb.org/3/movie";
 let api_base = 'https://api.themoviedb.org/3/';
 let tv_genres_http = "discover/tv?";
 let api_mejor_calificadas = 'movie/top_rated?';
-let generospelis = "discover/movie?";
+let generospelis = "discover/movie?"; 
