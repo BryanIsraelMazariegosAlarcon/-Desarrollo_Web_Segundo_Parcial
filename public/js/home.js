@@ -6,9 +6,9 @@ var d = 0;
 
 fetch(genres_list_http + new URLSearchParams({
         api_key: api_key,
-        language: "es"                          //PARA COLOCARLO EN ESPANOL
+        language: "es"                              //PARA COLOCARLO EN ESPANOL
     }))
-    .then(res => res.json()).then(data => {        
+    .then(res => res.json()).then(data => {
         data.genres.forEach(item => {
             data_original.generos[d] = {
                 id: item.id,
@@ -25,7 +25,7 @@ const fetchMovieListByGenres = (id, genres) => {
     fetch(movie_genres_http + new URLSearchParams({
             api_key: api_key,
             with_genres: id,
-            language: "es",                 //PARA COLOCARLO EN ESPANOL
+            language: "es",                         //PARA COLOCARLO EN ESPANOL
             page: Math.floor(Math.random() * 3) + 1
         })).then(res => res.json()).then(data => {
             makeCategoryElement(`${genres}`, data.results);
@@ -53,7 +53,7 @@ const makeCards = (id, data) => {
     const movieContainer = document.getElementById(id);
     data.forEach((item, i) => {
         if (item.backdrop_path == null) {
-            item.backdrop_path = item.poster_path;            
+            item.backdrop_path = item.poster_path;
             if (item.backdrop_path == null) {
                 return;
             }
@@ -66,11 +66,11 @@ const makeCards = (id, data) => {
         <p class="movie-title">${item.title}</p>
       </div>
         `;
-        if(i == data.length - 1){
-            setTimeout(()=>{
+        if (i == data.length - 1) {
+            setTimeout(() => {
                 setupScrolling();
-            },100);
+            }, 100);
         }
     })
-    
+
 }
