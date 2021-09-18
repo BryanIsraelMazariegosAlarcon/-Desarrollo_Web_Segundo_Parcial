@@ -4,7 +4,7 @@ fetch(
         `${movie_detail_http}${movie_id}?` +
         new URLSearchParams({
             api_key: api_key,
-            language: "es"                          //PARA COLOCARLO EN ESPANOL
+            language: "es"                            //PARA COLOCARLO EN ESPANOL
         })
     )
     .then((res) => res.json())
@@ -51,7 +51,7 @@ fetch(
         `${movie_detail_http}${movie_id}/credits?` +
         new URLSearchParams({
             api_key: api_key,
-            language: "es"                          //PARA COLOCARLO EN ESPANOL
+            language: "es"                            //PARA COLOCARLO EN ESPANOL
         })
     )
     .then((res) => res.json())
@@ -69,7 +69,7 @@ fetch(
         `${movie_detail_http}${movie_id}/videos?` +
         new URLSearchParams({
             api_key: api_key,
-            language: "es"                          //PARA COLOCARLO EN ESPANOL
+            language: "es"                              //PARA COLOCARLO EN ESPANOL
         })
     )
     .then((res) => res.json())
@@ -91,7 +91,7 @@ fetch(
         `${movie_detail_http}${movie_id}/recommendations?` +
         new URLSearchParams({
             api_key: api_key,
-            language: "es"                          //PARA COLOCARLO EN ESPANOL
+            language: "es"                                 //PARA COLOCARLO EN ESPANOL
         })
     )
     .then((res) => res.json())

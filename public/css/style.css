@@ -171,6 +171,7 @@ body {
   margin-top: 80px;
   margin-left: 400px;
 }
+
 .filtros {
   position: absolute;
   z-index: 100;
@@ -196,9 +197,11 @@ body {
   color: rgb(255, 255, 255, 0.5);
   outline: none;
 }
+
 #buscar:focus {
   border: solid 1px red;
 }
+
 #buscar:hover {
   border: solid 1px red;
 }
